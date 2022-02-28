@@ -1,0 +1,104 @@
+body {
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  font-family: 'DM Sans', sans-serif;
+  height: 100vh;
+  display: grid;
+  text-align: center;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+header {
+  grid-column: 1 / -1;
+  box-shadow: 0 0 20px hsla(0, 0%, 0%, 0.5);
+  background-color: hsl(0, 0%, 84%);
+  width: 100%;
+  height: 6em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.title {
+  grid-column: 1 / 5;
+  color: hsl(160, 54%, 56%);
+}
+
+.options {
+  grid-column: 6/8;
+  display: flex;
+  justify-content: space-evenly;
+  color: hsl(0, 0%, 21%);
+}
+
+main {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-auto-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.col-display {
+  min-width: 300px;
+  grid-column: 4 / 6;
+  grid-row: 1;
+  background-color: hsl(0, 0%, 26%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.8);
+  text-shadow: 3px 3px 6px rgba(37, 37, 37, 0.477);
+}
+
+#hex-code {
+  color: hsl(160, 54%, 56%);
+}
+
+.r-col-btn {
+  border: none;
+  text-align: center;
+  grid-column: 4 / 6;
+  background-color: hsla(0, 0%, 100%, 0);
+  grid-row: 2;
+  color: hsl(0, 0%, 21%);
+  margin: 2em;
+  /* border: 3px solid hsl(0, 0%, 21%); */
+  box-shadow: inset 0 0 10px hsla(0, 0%, 0%, 0.6);
+  border-radius: 5px;
+}
+
+.r-col-btn:active {
+  /* background-color: rgba(255, 253, 253, 0.185); */
+  animation-name: anim;
+  animation-duration: 0.4s;
+}
+
+@keyframes anim {
+  0% {
+    box-shadow: inset 0 0 10px hsla(0, 0%, 0%, 0.5);
+    color: hsl(0, 0%, 21%);
+  }
+  30% {
+    box-shadow: inset 0 0 0px hsla(0, 0%, 0%, 0);
+    color: hsl(160, 54%, 56%);
+  }
+  70% {
+    box-shadow: inset 0 0 0px hsla(0, 0%, 0%, 0);
+    color: hsl(160, 54%, 56%);
+  }
+  100% {
+    box-shadow: inset 0 0 10px hsla(0, 0%, 0%, 0.5);
+    color: hsl(0, 0%, 21%);
+  }
+}
